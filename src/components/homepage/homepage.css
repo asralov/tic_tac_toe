@@ -1,0 +1,48 @@
+#mainContainer{
+    background-color: #0c1a31;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mainTable {
+    position: relative;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    background-color: #07101f;
+    border-radius: 8px;
+    
+}
+
+
+span
+{
+    color: white;
+    font-size: 6rem;
+}
+
+.mainBtns
+{
+    width: 200px;
+    padding: 10px;
+    background-color: #07101f;
+    color: #fff;
+    border: 0.5px #fff solid;
+    transition: .3s ease-in;
+    border-radius: 8px;
+}
+
+.mainBtns:hover
+{
+    background-color: #fff;
+    color: #07101f;
+    border-radius: 0;
+}
