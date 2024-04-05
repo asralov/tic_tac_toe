@@ -1,0 +1,41 @@
+/* game.css */
+#gameBoard {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%); /* Adjust the width of each cell */
+    grid-template-rows: repeat(3, 33.3%); /* Adjust the height of each row */
+    width: 600px;
+    height: 600px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px; /* Increase the font size for better visibility */
+    cursor: pointer;
+    border: #fff 2px solid;
+    color: #ffffff;
+    height: 200px;
+}
+
+
+
+#cell1, #cell4, #cell7{
+    border-left: none;
+}
+
+#cell1, #cell2, #cell3
+{
+    border-top: none;
+}
+
+#cell3, #cell6, #cell9
+{
+    border-right: none;
+}
+
+#cell7, #cell8, #cell9
+{
+    border-bottom: none;
+}

@@ -1,38 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import "./homepage.css";
 import { GiTicTacToe } from "react-icons/gi";
+import Game from "../game/game.js";
 
-const Starter = () => {
+const GameTag = () => {
     return (
-        <div id="mainTable">
-            <div>
-            
-                <span id="gameTag">
-                        Tic Tac Toe 
-                        {' '}
-                    <GiTicTacToe />
-                </span>
-            </div>
-            <div>
-                <button className="mainBtns">
-                    Play
-                </button>
-            </div>
-            <div>
-                <button className="mainBtns">
-                    Description
-                </button>
-            </div>
+        <div>
+            <span id="gameTag">
+                Tic Tac Toe 
+                {' '}
+                <GiTicTacToe />
+            </span>
         </div>
     );
 }
 
+const Play = ({ onClick }) => {
+    return (
+        <div>
+            <button className="mainBtns" onClick={onClick}>
+                Play
+            </button>
+        </div>
+    );
+}
 
+const Description = () => {
+    return (
+        <div>
+            <button className="mainBtns">
+                Description
+            </button>
+        </div>
+    );
+}
+
+const Starter = ({ onPlayClick }) => {
+    return (
+        <div id="mainTable">
+            <GameTag />
+            <Play onClick={onPlayClick} />
+            <Description />
+        </div>
+    );
+}
 
 const Homepage = () => {
+    const [showGame, setShowGame] = useState(false);
+
+    const handlePlayClick = () => {
+        setShowGame(true);
+    }
+
     return (
         <div id="mainContainer">
-            <Starter />
+            {showGame ? <Game /> : <Starter onPlayClick={handlePlayClick} />}
         </div>
     );
 }

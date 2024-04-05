@@ -4,7 +4,10 @@ import Homepage from './components/homepage/homepage.js'
 
 function App() {
   return (
-    <Homepage />
+    <div id='mainContainer'>
+        <Homepage />
+    </div>
+    
   );
 }
 
