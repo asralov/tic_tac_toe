@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./homepage.css";
 import { GiTicTacToe } from "react-icons/gi";
-import Game from "../game/game.js";
+import Game from "../game/game.jsx";
 
 const GameTag = () => {
     return (
